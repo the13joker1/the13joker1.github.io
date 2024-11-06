@@ -1,24 +1,14 @@
-/* Gesamten Hintergrund des body auf dunkel setzen */
+/* Hintergrundstil für den gesamten Body */
 body {
     margin: 0;
     overflow: hidden;
     background: #1b1b2f; /* Dunkler Grundton */
     font-family: Arial, sans-serif;
+    color: #fff;
+    text-align: center;
 }
 
-/* Neonartige animierte Linien als Hintergrund */
-@keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
+/* Neonlinien für animierte Background */
 .lines-container {
     position: absolute;
     top: 0;
@@ -35,30 +25,44 @@ body {
 .line {
     width: 2px;
     height: 100px;
-    background: linear-gradient(180deg, rgba(0,255,255,0), #0ff, rgba(0,255,255,0)); /* Neon-cyan Linie */
+    background: linear-gradient(180deg, rgba(0,255,255,0), #0ff, rgba(0,255,255,0));
     animation: float 5s ease-in-out infinite;
     animation-delay: calc(-1s * var(--i));
     opacity: 0.8;
 }
 
-/* Zusätzliche Farben für variablen Neon-Look */
-.line:nth-child(odd) {
-    background: linear-gradient(180deg, rgba(255,0,255,0), #f0f, rgba(255,0,255,0)); /* Neon-magenta */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+    100% { transform: translateY(0); }
 }
 
-@keyframes neonGlow {
-    0%, 100% {
-        box-shadow: 0 0 20px #0ff, 0 0 40px #0ff, 0 0 80px #0ff;
-    }
-    50% {
-        box-shadow: 0 0 30px #f0f, 0 0 60px #f0f, 0 0 120px #f0f;
-    }
-}
-
-.bio-container {
+/* Stil für die Begrüßung und Biografie-Text */
+.bio-container h1 {
+    font-size: 3rem;
     color: #fff;
-    padding: 2rem;
-    text-align: center;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+    margin-bottom: 0.5rem;
+}
+
+.bio-container p {
     font-size: 1.5rem;
-    animation: neonGlow 4s ease-in-out infinite;
+    color: #ccc;
+    margin-top: 0;
+}
+
+/* Stil für Social Media Links und Badges */
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a, .social-links img {
+    margin: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.7));
+}
+
+.social-links a img:hover, .social-links img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.7);
 }
