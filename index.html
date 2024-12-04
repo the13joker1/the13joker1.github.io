@@ -76,8 +76,8 @@
 
     <script>
         const repoContainer = document.getElementById('repo-container');
-        const githubUsername = 'the13joker1';
-
+        const githubUsername = 'THE_13joker1';
+    
         fetch(`https://api.github.com/users/${githubUsername}/repos`)
             .then(response => response.json())
             .then(repos => {
@@ -87,12 +87,14 @@
                     repoCard.innerHTML = `
                         <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
                         <p>${repo.description || 'No description available.'}</p>
-                        <img src="https://opengraph.githubassets.com/1/${githubUsername}/${repo.name}" alt="${repo.name} Preview">
+                        <img class="repo-image" src="https://opengraph.githubassets.com/1/${githubUsername}/${repo.name}" alt="${repo.name} Preview">
                     `;
                     repoContainer.appendChild(repoCard);
                 });
             })
             .catch(error => console.error('Error fetching repositories:', error));
+    </script>
+    
     </script>
 </body>
 </html>
