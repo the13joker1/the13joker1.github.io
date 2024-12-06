@@ -37,75 +37,65 @@
 
     <script src="https://cdn.counter.dev/script.js" data-id="860f4808-1de0-4389-bfa7-148f3772f1d2" data-utcoffset="1"></script>
 
-
-
-
-    
-
-
 </head>
 <body>
-    <header>
-        <h1>Welcome to THE_13joker1's Bio page</h1>
-        <p>Developer | Gamer | Adventurer</p>
-    </header>
-
-    <section id="bio">
-        <h2>About Me</h2>
-        <p>
-            I'm a passionate developer who loves creating games and web apps. 
-            From adventure to horror, my projects reflect creativity and a love for gaming.
-        </p>
-    </section>
-
-    <section id="social">
-        <h2>Social Links</h2>
-        <div class="social-icons">
-            <a href="https://github.com/THE_13joker1" target="_blank">
-                <img src="/icons/github-icon.png" alt="GitHub">
-            </a>
-            <a href="https://discord.com/invite/yourserver" target="_blank">
-                <img src="/icons/discord-icon.png" alt="Discord">
-            </a>
-            <a href="https://twitter.com/yourprofile" target="_blank">
-                <img src="/icons/twitter-icon.png" alt="Twitter">
-            </a>
+    <div class="container">
+        <h1>💫 About Me</h1>
+        <p>I'm currently learning C# and want to learn Java.</p>
+        <div class="section">
+            <h2>🌐 Socials</h2>
+            <div class="badges">
+                <a href="https://discord.gg/2Mu5PkNXVN" target="_blank">
+                    <img src="https://img.shields.io/badge/Discord-%237289DA.svg?logo=discord&logoColor=white" alt="Discord">
+                </a>
+                <a href="https://reddit.com/user/THE_13joker1" target="_blank">
+                    <img src="https://img.shields.io/badge/Reddit-%23FF4500.svg?logo=Reddit&logoColor=white" alt="Reddit">
+                </a>
+                <a href="https://stackoverflow.com/users/25563415" target="_blank">
+                    <img src="https://img.shields.io/badge/-Stackoverflow-FE7A16?logo=stack-overflow&logoColor=white" alt="Stack Overflow">
+                </a>
+                <a href="https://twitch.tv/the_13joker1" target="_blank">
+                    <img src="https://img.shields.io/badge/Twitch-%239146FF.svg?logo=Twitch&logoColor=white" alt="Twitch">
+                </a>
+                <a href="https://youtube.com/c/UC2M-hFOz2rrEd24ARg9Tutg" target="_blank">
+                    <img src="https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white" alt="YouTube">
+                </a>
+            </div>
         </div>
-    </section>
-
-    <section id="repos">
-        <h2>Projects & Games</h2>
-        <div id="repo-container"></div>
-    </section>
-
-    <footer>
-        <p>
-            Built by <strong>THE_13joker1</strong>. Follow me on 
-            <a href="https://github.com/the13joker1" target="_blank">GitHub</a>.
-        </p>
-    </footer>
-
-    <script>
-        const repoContainer = document.getElementById('repo-container');
-        const githubUsername = 'the13joker1';
-    
-        fetch(`https://api.github.com/users/${githubUsername}/repos`)
-            .then(response => response.json())
-            .then(repos => {
-                repos.forEach(repo => {
-                    const repoCard = document.createElement('div');
-                    repoCard.className = 'repo-card';
-                    repoCard.innerHTML = `
-                        <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
-                        <p>${repo.description || 'No description available.'}</p>
-                        <img class="repo-image" src="https://opengraph.githubassets.com/1/${githubUsername}/${repo.name}" alt="${repo.name} Preview">
-                    `;
-                    repoContainer.appendChild(repoCard);
-                });
-            })
-            .catch(error => console.error('Error fetching repositories:', error));
-    </script>
-    
-    </script>
+        <div class="section">
+            <h2>💻 Tech Stack</h2>
+            <div class="badges">
+                <img src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white" alt="C#">
+                <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+                <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+                <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript">
+                <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white" alt="Java">
+                <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python">
+                <img src="https://img.shields.io/badge/swift-F54A2A?style=for-the-badge&logo=swift&logoColor=white" alt="Swift">
+                <img src="https://img.shields.io/badge/google%20cloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white" alt="Google Cloud">
+                <img src="https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase" alt="Firebase">
+                <img src="https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap">
+                <img src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white" alt="Flask">
+                <img src="https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite">
+            </div>
+        </div>
+        <div class="section">
+            <h2>📊 GitHub Stats</h2>
+            <img src="https://github-readme-stats.vercel.app/api?username=the13joker1&theme=highcontrast&hide_border=false&include_all_commits=true&count_private=false" alt="GitHub Stats">
+            <img src="https://github-readme-streak-stats.herokuapp.com/?user=the13joker1&theme=highcontrast&hide_border=false" alt="GitHub Streak">
+            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=the13joker1&theme=highcontrast&hide_border=false&include_all_commits=true&count_private=false&layout=compact" alt="Top Languages">
+        </div>
+        <div class="section">
+            <h2>✍️ Random Dev Quote</h2>
+            <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" alt="Dev Quote">
+        </div>
+        <footer>
+            <p>
+                <a href="https://visitcount.itsvg.in" target="_blank">
+                    <img src="https://visitcount.itsvg.in/api?id=the13joker1&icon=0&color=0" alt="Visit Count">
+                </a>
+            </p>
+        </footer>
+    </div>
 </body>
 </html>
